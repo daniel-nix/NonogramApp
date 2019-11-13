@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/colorPrimary">
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".35"
+            android:id="@+id/arrow_guide"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".40"
+            android:id="@+id/bottom_guide" />
+    
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".7"
+            android:id="@+id/button_guide" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".47"
+            android:id="@+id/button_bottom_guide" />
+
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/up_arrow"
+            android:id="@+id/up_arrow"
+            app:layout_constraintRight_toLeftOf="@id/arrow_guide"
+            app:layout_constraintBottom_toTopOf="@id/bottom_guide"/>
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/right_arrow"
+            android:id="@+id/right_arrow"
+            app:layout_constraintLeft_toRightOf="@id/up_arrow"
+            app:layout_constraintTop_toBottomOf="@id/up_arrow"/>
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/down_arrow"
+            android:id="@+id/down_arrow"
+            app:layout_constraintTop_toBottomOf="@id/right_arrow"
+            app:layout_constraintRight_toLeftOf="@id/right_arrow"/>
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/left_arrow"
+            android:src="@drawable/left_arrow"
+            app:layout_constraintRight_toLeftOf="@id/up_arrow"
+            app:layout_constraintTop_toBottomOf="@id/up_arrow"/>
+
+    <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="13dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:id="@+id/x_button"
+            android:src="@drawable/x_icon"
+            android:background="@drawable/controller_button"
+            app:layout_constraintBottom_toTopOf="@id/button_bottom_guide"
+            app:layout_constraintRight_toLeftOf="@id/button_guide"/>
+
+    <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:id="@+id/check_button"
+            android:src="@drawable/check"
+            android:background="@drawable/controller_button"
+            app:layout_constraintTop_toBottomOf="@id/button_bottom_guide"
+            app:layout_constraintLeft_toRightOf="@id/button_guide"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
